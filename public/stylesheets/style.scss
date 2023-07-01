@@ -109,17 +109,29 @@ ul li {
 #logout-form button {
   width: 120px;
 } */
+
 /* New Styles */
 :root {
+  // font family
+  //   --font-family: "Kumbh Sans",
+
+  // colors
   --black: #1d2026;
   --medium-grey: #69707d;
   --border-grey: #dedede;
   --light-grey: #ebebeb;
   --white: white;
+
   --green: #6cad3f;
   --red: #ff6477;
+
+  // border-radius
   --std-border-radius: 10px;
+
+  // standart Border
   --std-border: 1px solid var(--border-grey);
+
+  // font-sizes
   --font-L: 44px;
   --font-M: 24px;
   --font-S: 16px;
@@ -133,6 +145,7 @@ ul li {
 body {
   margin: 0;
   padding: 0;
+  //   background-color: rgb(37, 239, 192);
   font-family: var(--font-family);
   font-size: 16px;
   font-family: "Kumbh Sans", sans-serif;
@@ -155,47 +168,60 @@ p {
   margin: 0 auto;
 }
 
+// Navbar styling
 nav {
   width: 100%;
   height: 100px;
   background-color: white;
+
+  .navContent {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-bottom: var(--std-border);
+    position: relative;
+
+    .logo {
+      font-size: var(--font-M);
+      font-weight: bold;
+      color: var(--black);
+      bottom: 5px;
+      position: relative;
+      //   display: flex;
+
+      img {
+        // width: 40px;
+        height: 35px;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 45px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--medium-grey);
+
+      img {
+        width: 18px;
+      }
+    }
+
+    a:hover {
+      color: #6cad3f;
+    }
+
+    .loginIcon a {
+      //   color: var(--green);
+      font-weight: bold;
+    }
+  }
 }
-nav .navContent {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  border-bottom: var(--std-border);
-  position: relative;
-}
-nav .navContent .logo {
-  font-size: var(--font-M);
-  font-weight: bold;
-  color: var(--black);
-  bottom: 5px;
-  position: relative;
-}
-nav .navContent .logo img {
-  height: 35px;
-}
-nav .navContent ul {
-  display: flex;
-  gap: 45px;
-}
-nav .navContent li {
-  list-style: none;
-}
-nav .navContent a {
-  text-decoration: none;
-  color: var(--medium-grey);
-}
-nav .navContent a img {
-  width: 18px;
-}
-nav .navContent a:hover {
-  color: #6cad3f;
-}
-nav .navContent .loginIcon a {
-  font-weight: bold;
-}/*# sourceMappingURL=style.css.map */
