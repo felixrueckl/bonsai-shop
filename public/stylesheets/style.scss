@@ -1,115 +1,3 @@
-/* public/stylesheets/style.css body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-body {
-  background-color: rgb(81, 221, 38);
-}
-
-a {
-  color: #00b7ff;
-  text-decoration: none;
-  font-size: 1.5em;
-}
-
-form {
-  margin: 30px auto;
-  width: 380px;
-}
-
-form label {
-  color: #666;
-  display: inline-block;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 100%;
-}
-
-form input,
-form button {
-  box-sizing: border-box;
-  font-size: 14px;
-  outline: 0;
-  padding: 4px;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-form button {
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  padding: 8px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.3s ease background;
-  width: 100%;
-}
-
-form button:hover {
-  background: #fff;
-  color: #43a3e6;
-  transition: 0.3s ease background;
-}
-
-.error {
-  background: #f02b63;
-  box-sizing: border-box;
-  color: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  width: 100%;
-}
-
-ul {
-  border-bottom: 2px solid #43a3e6;
-  height: 30px;
-  padding: 1em 0;
-  list-style-type: none;
-}
-
-ul li {
-  line-height: 20px;
-}
-
-#to-right {
-  padding: 1em;
-  float: right;
-}
-
-#to-right span {
-  color: #43a3e6;
-  font-size: 1.5em;
-}
-
-#form h2 {
-  display: flex;
-  justify-content: center;
-}
-
-#to-left {
-  float: left;
-}
-
-#to-left p a {
-  color: #000;
-  font-weight: bold;
-  font-size: 2em;
-}
-
-#logout-form {
-  display: inline;
-}
-
-#logout-form button {
-  width: 120px;
-} */
-
 /* New Styles */
 :root {
   // colors
@@ -124,6 +12,7 @@ ul li {
 
   // border-radius
   --std-border-radius: 10px;
+  --sm-border-radius: 5px;
 
   // standart Border
   --std-border: 1px solid var(--border-grey);
@@ -158,6 +47,21 @@ h2 {
 
 p {
   font-size: 16px;
+}
+
+label {
+  font-size: var(--font-S);
+}
+
+.button {
+  color: white;
+  background-color: var(--green);
+  border: none;
+  border-radius: var(--sm-border-radius);
+  padding: 10px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .wrapper {
@@ -243,5 +147,43 @@ nav {
   img {
     width: 100%;
     border-radius: 10px;
+  }
+}
+
+// From Styling
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 20px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    margin: 75px 0 50px 0;
+  }
+
+  label {
+    font-weight: bold;
+    color: var(--black);
+  }
+
+  input {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: var(--std-border);
+    border-radius: var(--sm-border-radius);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+    font-family: "Kumbh Sans", sans-serif;
+  }
+
+  button {
+    width: 100%;
   }
 }
