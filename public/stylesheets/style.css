@@ -136,6 +136,7 @@ body {
   font-family: var(--font-family);
   font-size: 16px;
   font-family: "Kumbh Sans", sans-serif;
+  color: var(--black);
 }
 
 h1 {
@@ -196,6 +197,26 @@ nav .navContent a img {
 nav .navContent a:hover {
   color: #6cad3f;
 }
-nav .navContent .loginIcon a {
-  font-weight: bold;
+
+.shop h1 {
+  text-align: center;
+  margin: 75px 0 50px 0;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.producContainer {
+  text-align: center;
+}
+.producContainer .productTextContainer {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.producContainer img {
+  width: 100%;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

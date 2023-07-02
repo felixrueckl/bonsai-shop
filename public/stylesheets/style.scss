@@ -112,9 +112,6 @@ ul li {
 
 /* New Styles */
 :root {
-  // font family
-  //   --font-family: "Kumbh Sans",
-
   // colors
   --black: #1d2026;
   --medium-grey: #69707d;
@@ -145,10 +142,10 @@ ul li {
 body {
   margin: 0;
   padding: 0;
-  //   background-color: rgb(37, 239, 192);
   font-family: var(--font-family);
   font-size: 16px;
   font-family: "Kumbh Sans", sans-serif;
+  color: var(--black);
 }
 
 h1 {
@@ -189,10 +186,8 @@ nav {
       color: var(--black);
       bottom: 5px;
       position: relative;
-      //   display: flex;
 
       img {
-        // width: 40px;
         height: 35px;
       }
     }
@@ -218,10 +213,33 @@ nav {
     a:hover {
       color: #6cad3f;
     }
+  }
+}
 
-    .loginIcon a {
-      //   color: var(--green);
-      font-weight: bold;
-    }
+// Shop Styling
+.shop {
+  h1 {
+    text-align: center;
+    margin: 75px 0 50px 0;
+  }
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.producContainer {
+  text-align: center;
+
+  .productTextContainer {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
   }
 }
