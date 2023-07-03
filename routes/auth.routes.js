@@ -37,7 +37,6 @@ router.post("/signup", (req, res, next) => {
     .then((salt) => bcryptjs.hash(password, salt))
     .then((hashedPassword) => {
       return User.create({
-        // username: username
         username,
         email,
         passwordHash: hashedPassword,
@@ -63,8 +62,6 @@ router.post("/signup", (req, res, next) => {
 router.get("/login", (req, res) => res.render("auth/login"));
 
 router.post("/login", (req, res, next) => {
-  // const email = req.body.email;
-  // const password = req.body.password;
   const { email, password } = req.body;
   console.log("SESSION =====> ", req.session);
 

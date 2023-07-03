@@ -16,6 +16,9 @@ const hbs = require("hbs");
 const app = express();
 require("./config/session.config")(app);
 
+// Serve the "images" folder inside "public"
+app.use(express.static(__dirname + "/public/images/"));
+
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
@@ -25,14 +28,14 @@ const projectName = "basic-auth";
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
 // 👇 Start handling routes here
-// const indexRoutes = require("./routes/index.routes");
-// app.use("/", indexRoutes);
 const index = require("./routes/index.routes"); // <== already included
 app.use("/", index); // <== already included
 
-// maybe need to be renamed
 const authRouter = require("./routes/auth.routes"); // <== has to be added
 app.use("/", authRouter); // <== has to be added
+
+const shopRouter = require("./routes/shop.routes");
+app.use("/", shopRouter);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

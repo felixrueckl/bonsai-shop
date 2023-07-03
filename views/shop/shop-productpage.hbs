@@ -1,0 +1,31 @@
+{{!-- <div class="Product Page">
+    <h1>{{this.name}}</h1>
+    <a href="#"><img src={{this.imgUrl}} alt="" /></a>
+    <span>{{this.price}}€</span>
+    <p>{{this.description}}</p>
+  </div>
+</div> --}}
+
+<div class="wrapper">
+  <div class="singleProducContainer">
+    <img src="{{this.imgUrl}}" alt="" />
+
+    <div class="singleProductTextContainer">
+      <div class="topSection">
+        <div class="singleProductHeaderContainer">
+          <span class="storeIcon">Bonsai Store</span>
+          <h1>{{this.name}}</h1>
+        </div>
+        <p>
+          {{this.description}}
+        </p>
+      </div>
+      <div class="bottomSection">
+        <div class="priceAndButtonContainer">
+          <span class="priceValue">{{this.price}}$</span>
+          <button class="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

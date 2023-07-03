@@ -1,108 +1,207 @@
-/* public/stylesheets/style.css */
+/* New Styles */
+:root {
+  --black: #1d2026;
+  --medium-grey: #69707d;
+  --border-grey: #dedede;
+  --light-grey: #ebebeb;
+  --white: white;
+  --green: #6cad3f;
+  --red: #ff6477;
+  --std-border-radius: 10px;
+  --sm-border-radius: 5px;
+  --std-border: 1px solid var(--border-grey);
+  --font-L: 44px;
+  --font-M: 24px;
+  --font-S: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--black);
 }
 
-a {
-  color: #00b7ff;
-  text-decoration: none;
-  font-size: 1.5em;
+h1 {
+  font-size: 44px;
 }
 
-form {
-  margin: 30px auto;
-  width: 380px;
+h2 {
+  font-size: 24px;
 }
 
-form label {
-  color: #666;
-  display: inline-block;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 100%;
+p {
+  font-size: 16px;
+  color: var(--medium-grey);
+  line-height: 150%;
 }
 
-form input,
-form button {
-  box-sizing: border-box;
-  font-size: 14px;
-  outline: 0;
-  padding: 4px;
-  width: 100%;
-  margin-bottom: 20px;
+label {
+  font-size: var(--font-S);
 }
 
-form button {
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  padding: 8px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.3s ease background;
-  width: 100%;
-}
-
-form button:hover {
-  background: #fff;
-  color: #43a3e6;
-  transition: 0.3s ease background;
-}
-
-.error {
-  background: #f02b63;
-  box-sizing: border-box;
-  color: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  width: 100%;
-}
-
-ul {
-  border-bottom: 2px solid #43a3e6;
-  height: 30px;
-  padding: 1em 0;
-  list-style-type: none;
-}
-
-ul li {
-  line-height: 20px;
-}
-
-#to-right {
-  padding: 1em;
-  float: right;
-}
-
-#to-right span {
-  color: #43a3e6;
-  font-size: 1.5em;
-}
-
-#form h2 {
-  display: flex;
-  justify-content: center;
-}
-
-#to-left {
-  float: left;
-}
-
-#to-left p a {
-  color: #000;
+.button {
+  color: white;
+  background-color: var(--green);
+  border: none;
+  border-radius: var(--sm-border-radius);
+  padding: 10px;
+  font-family: "Kumbh Sans", sans-serif;
   font-weight: bold;
-  font-size: 2em;
+  text-transform: uppercase;
 }
 
-#logout-form {
-  display: inline;
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
-#logout-form button {
-  width: 120px;
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: white;
 }
+nav .navContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border-bottom: var(--std-border);
+  position: relative;
+}
+nav .navContent .logo {
+  font-size: var(--font-M);
+  font-weight: bold;
+  color: var(--black);
+  bottom: 5px;
+  position: relative;
+}
+nav .navContent .logo img {
+  height: 35px;
+}
+nav .navContent ul {
+  display: flex;
+  gap: 45px;
+}
+nav .navContent li {
+  list-style: none;
+}
+nav .navContent a {
+  text-decoration: none;
+  color: var(--medium-grey);
+}
+nav .navContent a img {
+  width: 18px;
+}
+nav .navContent a:hover {
+  color: #6cad3f;
+}
+
+.shop h1 {
+  text-align: center;
+  margin: 75px 0 50px 0;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.producContainer {
+  text-align: center;
+}
+.producContainer .productTextContainer {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.producContainer img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.singleProducContainer {
+  display: flex;
+  gap: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.singleProducContainer img {
+  width: 40%;
+  border-radius: var(--std-border-radius);
+}
+.singleProducContainer .singleProductTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.singleProducContainer .singleProductTextContainer .topSection {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.singleProducContainer .singleProductTextContainer .storeIcon {
+  color: var(--green);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.singleProducContainer .singleProductTextContainer .priceValue {
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+.singleProducContainer .singleProductTextContainer .priceAndButtonContainer {
+  display: flex;
+  gap: 30px;
+}
+.singleProducContainer .singleProductTextContainer .priceAndButtonContainer .button {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 20px;
+  margin: 0 auto;
+}
+.form h1 {
+  text-align: center;
+  margin: 75px 0 50px 0;
+}
+.form label {
+  font-weight: bold;
+  color: var(--black);
+}
+.form input {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: var(--std-border);
+  border-radius: var(--sm-border-radius);
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.form input::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.form input::placeholder {
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.form button {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
