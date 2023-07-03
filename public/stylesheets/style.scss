@@ -47,6 +47,8 @@ h2 {
 
 p {
   font-size: 16px;
+  color: var(--medium-grey);
+  line-height: 150%;
 }
 
 label {
@@ -133,7 +135,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
-  //   padding: 30px;
 }
 
 .producContainer {
@@ -147,6 +148,53 @@ nav {
   img {
     width: 100%;
     border-radius: 10px;
+  }
+}
+
+// Single Product styling
+.singleProducContainer {
+  display: flex;
+  gap: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  img {
+    width: 40%;
+    border-radius: var(--std-border-radius);
+  }
+  .singleProductTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .topSection {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .storeIcon {
+      color: var(--green);
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .priceValue {
+      color: black;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .priceAndButtonContainer {
+      display: flex;
+      gap: 30px;
+      .button {
+        width: 100%;
+      }
+    }
   }
 }
 

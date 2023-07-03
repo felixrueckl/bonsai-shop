@@ -39,6 +39,8 @@ h2 {
 
 p {
   font-size: 16px;
+  color: var(--medium-grey);
+  line-height: 150%;
 }
 
 label {
@@ -125,6 +127,47 @@ nav .navContent a:hover {
 .producContainer img {
   width: 100%;
   border-radius: 10px;
+}
+
+.singleProducContainer {
+  display: flex;
+  gap: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.singleProducContainer img {
+  width: 40%;
+  border-radius: var(--std-border-radius);
+}
+.singleProducContainer .singleProductTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.singleProducContainer .singleProductTextContainer .topSection {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.singleProducContainer .singleProductTextContainer .storeIcon {
+  color: var(--green);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.singleProducContainer .singleProductTextContainer .priceValue {
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+.singleProducContainer .singleProductTextContainer .priceAndButtonContainer {
+  display: flex;
+  gap: 30px;
+}
+.singleProducContainer .singleProductTextContainer .priceAndButtonContainer .button {
+  width: 100%;
 }
 
 .form {
