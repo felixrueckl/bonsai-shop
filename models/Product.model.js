@@ -1,41 +1,32 @@
-// Import required modules or packages
-const mongoose = require("mongoose");
+=======
+const { Schema, model } = require("mongoose");
 
-// Define the product schema
-const productSchema = new mongoose.Schema({
+const productSchema = new Schema({
+  imgUrl: {
+    type: String,
+  },
   name: {
     type: String,
-    required: true,
   },
-  description: {
-    type: String,
-    required: true,
+  _id: {
+    type: Schema.Types.ObjectId,
+    ref: "Product",
   },
   price: {
     type: Number,
-    required: true,
+  },
+  description: {
+    type: String,
+  },
+  age: {
+    type: Number,
+  },
+  stock: {
+    type: Number,
   },
   category: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: String,
-    required: true,
+    type: Number,
   },
 });
 
-// Define the Product model
-const Product = mongoose.model("Product", productSchema);
-
-// Example product data
-const exampleProduct = new Product({
-  name: "Chinese Elm",
-  description: "A beuftiful tree",
-  price: 2000,
-  category: "tree",
-  image: "https://example.com/images/smartphone_xyz.jpg",
-});
-
-// Export the Product model
-module.exports = Product;
+module.exports = model("Product", productSchema);
