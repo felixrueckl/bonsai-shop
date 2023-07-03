@@ -1,4 +1,18 @@
 <div class="shop wrapper">
+  <h1>Shop Trees</h1>
+  <div class="productsGrid">
+    {{#each products}}
+      <div class="producContainer">
+        <a href="/shop/{{this._id}}"><img src={{this.imgUrl}} alt="" /></a>
+        <div class="productTextContainer">
+          <h2>{{this.name}}</h2>
+          <span>{{this.price}}€</span></div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+{{! <div class="shop wrapper">
       <h1>Shop Trees</h1>
       <div class="productsGrid">
         <div class="producContainer">
@@ -85,4 +99,4 @@
               <span>2200$</span>
             </div>
           </div>  
-    </div>
+    </div> }}
