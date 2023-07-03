@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Japanese Wacholder",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391153/BonsaiShop/Japanese_Wacholder_r3xixp.png",
+    "price": "50",
+    "description": "The Japanese Wacholder, or Hinoki Cypress, is an evergreen coniferous tree native to Japan. Its graceful form, with cascading branches and fine-textured foliage, exudes a sense of serenity. The aromatic wood of the Wacholder has been used for centuries in traditional Japanese architecture and craftsmanship. Its compact size and elegant appearance make it a popular choice for bonsai enthusiasts. The Japanese Wacholder symbolizes resilience and adaptability, reflecting the enduring spirit of nature.",
+    "category": "tree",
+    "age": "60"
+  },
+  {
+    "name": "Acer palmatum",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391152/BonsaiShop/Acer_Palmatum_tboarz.png",
+    "price": "50",
+    "description": "Acer palmatum, commonly known as Japanese maple, is a small deciduous tree renowned for its vibrant and graceful appearance. Its delicate, palm-shaped leaves transform into a stunning display of red, orange, or yellow during the autumn season. The Japanese maple is highly valued in landscape design for its compact size and captivating foliage. It adds a touch of elegance and tranquility to gardens, courtyards, and Japanese-style landscapes. With its exquisite beauty and symbolic significance, the Acer palmatum has become a beloved tree that represents harmony, balance, and the ever-changing seasons.",
+    "category": "tree",
+    "age": "50"
+  },
+  {
+    "name": "Cedar",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391152/BonsaiShop/Cedar_hh6lxe.png",
+    "price": "50",
+    "description": "Cedar trees are known for their towering presence, aromatic wood, and ability to thrive in various environments. They are admired for their straight trunks, graceful branches, and evergreen foliage. Cedar wood has been utilized for centuries in construction, furniture, and even the production of essential oils. These majestic trees provide shade, privacy, and a sense of timelessness to landscapes. With their pleasant fragrance and natural beauty, cedars create an inviting atmosphere and evoke a connection with nature. They symbolize strength, endurance, and the enduring beauty of the natural world.",
+    "category": "tree",
+    "age": "80"
+  },
+  {
+    "name": "Ginseng Ficus",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391153/BonsaiShop/Ginseng_Ficus_ntyrnc.png",
+    "price": "50",
+    "description": "The Ginseng Ficus, a popular variety of Ficus microcarpa, is a unique bonsai tree that exhibits distinctive features. Its thick, exposed roots resemble the shape of ginseng roots, hence its name. The Ginseng Ficus bonsai has glossy, dark green leaves that create a lush canopy. Its trunk often showcases intriguing twists and turns, giving it a sense of age and character. This bonsai variety represents strength, resilience, and harmony between humans and nature. It is a captivating and low-maintenance choice for bonsai enthusiasts, bringing a touch of tranquility and beauty to indoor or outdoor spaces.",
+    "category": "tree",
+    "age": "90"
+  },
+  {
+    "name": "Azalea",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391152/BonsaiShop/Azalea_l2yels.png",
+    "price": "50",
+    "description": "Azaleas are enchanting flowering shrubs or small trees known for their vibrant and abundant blooms. These colorful flowers, available in various shades of pink, red, purple, or white, create a striking spectacle in gardens and landscapes. Azaleas symbolize femininity, love, and passion. Their elegant and delicate appearance adds charm and grace to any setting. With proper care, these hardy plants can provide years of stunning floral displays, attracting pollinators and delighting onlookers. Whether used as standalone specimens, hedgerows, or mass plantings, azaleas bring a splash of color and a touch of elegance to outdoor spaces.",
+    "category": "tree",
+    "age": "55"
+  },
+  {
+    "name": "White Oak",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391153/BonsaiShop/White_Oak_kwcbvm.png",
+    "price": "50",
+    "description": "The White Oak, or Quercus alba, is a majestic and long-lived tree known for its strength, durability, and distinct beauty. It features a broad, spreading crown and large, lobed leaves that turn shades of red, orange, or brown in the autumn. White Oak wood is highly valued for its strength and resistance to decay, making it a preferred choice for furniture, flooring, and barrels. In addition to its practical uses, the White Oak symbolizes wisdom, longevity, and the enduring power of nature. It stands as a testament to the beauty and resilience of the natural world.",
+    "category": "tree",
+    "age": "65"
+  },
+  {
+    "name": "Deadwood Bonsai",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391151/BonsaiShop/Deadwood_ebnpx9.png",
+    "price": "50",
+    "description": "Deadwood Bonsai is a unique style of bonsai that embraces the natural aging process of trees, highlighting the beauty of weathered and aged wood. It showcases the beauty of nature's imperfections, with dead or hollowed branches and gnarled bark, creating a sense of artistic expression and appreciation for the passage of time. Deadwood Bonsai exemplifies the Japanese aesthetic principle of Wabi-sabi, which values imperfection, transience, and the beauty found in natural decay. It provides a contemplative and serene element to bonsai displays, evoking a sense of reverence for nature's transformative powers.",
+    "category": "tree",
+    "age": "70"
+  },
+  {
+    "name": "Japanese Flowering Cherry",
+    "imgUrl": "https://res.cloudinary.com/dse6ivx7u/image/upload/v1688391336/BonsaiShop/Japanese_Flowering_Cherry_s1t6oe.png",
+    "price": "50",
+    "description": "The Japanese Flowering Cherry, or Sakura, is an exquisite tree that captivates with its profusion of delicate pink or white blossoms. It is celebrated as a symbol of beauty, renewal, and the transient nature of life. In Japan, the arrival of cherry blossoms heralds the arrival of spring and is celebrated with Hanami (flower viewing) gatherings. The fleeting beauty of the cherry blossoms reminds us to cherish the present moment and appreciate the ephemeral nature of life. The Japanese Flowering Cherry represents grace, elegance, and the celebration of the changing seasons. Its enchanting display is a true spectacle of nature's artistry.",
+    "category": "tree",
+    "age": "30"
+  }
+]
