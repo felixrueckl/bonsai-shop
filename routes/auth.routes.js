@@ -15,7 +15,7 @@ const {
 router.get("/signup", isLoggedIn, (req, res) => res.render("auth/signup"));
 
 // POST route ==> to process form data
-router.post("/signup", redirectToProfile, (req, res, next) => {
+router.post("/signup", isLoggedIn, (req, res, next) => {
   const { username, email, password } = req.body;
 
   if (!username || !email || !password) {
@@ -73,7 +73,7 @@ router.post("/signup", redirectToProfile, (req, res, next) => {
     });
 });
 
-router.get("/login", (req, res) => res.render("auth/login"));
+router.get("/login", isLoggedIn, (req, res) => res.render("auth/login"));
 
 router.post("/login", (req, res, next) => {
   const { email, password } = req.body;
