@@ -5,6 +5,14 @@ const mongoose = require("mongoose");
 
 const Product = require("../models/Product.model");
 
+router.get("/", (req, res, next) => {
+  res.render("index");
+});
+
+router.get("/home", (req, res, next) => {
+  res.render("index");
+});
+
 /* GET home page */
 router.get("/shop", (req, res, next) => {
   Product.find()
@@ -24,12 +32,10 @@ router.get("/shop/:productId", (req, res, next) => {
     .catch((err) => console.log("Error: ", err));
 });
 
-router.get("/", (req, res, next) => {
-  res.render("index");
-});
-
-router.get("/home", (req, res, next) => {
-  res.render("index");
+router.post("/shop/:productId/submit", (req, res, next) => {
+  const { productId } = req.params;
+  // ShoppingCart.post("$push", {req.params});
+  console.log("productId", req.params);
 });
 
 // export
