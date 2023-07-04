@@ -1,11 +1,3 @@
-{{!-- <div class="Product Page">
-    <h1>{{this.name}}</h1>
-    <a href="#"><img src={{this.imgUrl}} alt="" /></a>
-    <span>{{this.price}}€</span>
-    <p>{{this.description}}</p>
-  </div>
-</div> --}}
-
 <div class="wrapper">
   <div class="singleProducContainer">
     <img src="{{this.imgUrl}}" alt="" />
@@ -23,7 +15,9 @@
       <div class="bottomSection">
         <div class="priceAndButtonContainer">
           <span class="priceValue">{{this.price}}$</span>
-          <button class="button">Add to cart</button>
+          <form method="POST" action="/submit">
+            <button class="button" type="submit">Add to cart</button>
+          </form>
         </div>
       </div>
     </div>
