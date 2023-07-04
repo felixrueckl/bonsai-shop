@@ -5,13 +5,17 @@ const saltRounds = 10;
 const mongoose = require("mongoose");
 
 const User = require("../models/User.model");
-const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard.js");
+const {
+  isLoggedIn,
+  isLoggedOut,
+  redirectToProfile,
+} = require("../middleware/route-guard.js");
 
 // GET route ==> to display the signup form to users
 router.get("/signup", isLoggedIn, (req, res) => res.render("auth/signup"));
 
 // POST route ==> to process form data
-router.post("/signup", (req, res, next) => {
+router.post("/signup", redirectToProfile, (req, res, next) => {
   const { username, email, password } = req.body;
 
   if (!username || !email || !password) {
@@ -44,6 +48,16 @@ router.post("/signup", (req, res, next) => {
     })
     .then((userFromDB) => {
       console.log("Newly created user is: ", userFromDB);
+      req.session.currentUser = {
+        username: userFromDB.username,
+        email: userFromDB.email,
+      };
+      if (!req.session.newUserCreated) {
+        req.session.newUserCreated = true;
+      }
+    })
+    .then((user) => {
+      res.redirect("/userProfile");
     })
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {

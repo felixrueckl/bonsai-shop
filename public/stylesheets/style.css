@@ -20,6 +20,10 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +31,7 @@ body {
   font-size: 16px;
   font-family: "Kumbh Sans", sans-serif;
   color: var(--black);
+  width: 100vw;
 }
 
 h1 {
@@ -168,6 +173,76 @@ nav .navContent a:hover {
 }
 .singleProducContainer .singleProductTextContainer .priceAndButtonContainer .button {
   width: 100%;
+}
+
+.shoppingcart {
+  max-width: 600px;
+}
+.shoppingcart h1 {
+  text-align: center;
+  margin: 75px 0 50px 0;
+}
+.shoppingcart ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.shoppingcart .buttonCheckout {
+  display: flex;
+}
+.shoppingcart li {
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
+}
+.shoppingcart .shoppingCartProduct {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--std-border);
+  padding: 20px;
+  gap: 20px;
+}
+.shoppingcart .shoppingCartProduct .leftElements {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+.shoppingcart .shoppingCartProduct img {
+  width: 70px;
+  border-radius: var(--sm-border-radius);
+}
+.shoppingcart .shoppingCartProduct .shoppingCartProductTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shoppingcart .shoppingCartProduct .closeulb {
+  font-size: 60px;
+  position: relative;
+  bottom: 10px;
+}
+.shoppingcart .shoppingCartProduct .closeulb:hover {
+  cursor: pointer;
+  color: var(--red);
+}
+.shoppingcart .shoppingCartProduct .close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+.shoppingcart .shoppingCartProduct .close:hover {
+  background: #bbb;
+}
+.shoppingcart .bottomCheckout {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.shoppingcart .bottomCheckout h1 {
+  margin: 0;
 }
 
 .form {
