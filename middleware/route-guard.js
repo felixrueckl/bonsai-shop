@@ -15,7 +15,16 @@ const isLoggedOut = (req, res, next) => {
   next();
 };
 
+// redirect to user profile after signup is complete
+const redirectToProfile = (req, res, next) => {
+  if (req.session && req.session.newUserCreated) {
+    req.session.newUserCreated = false; // Reset the flag
+    return res.redirect("/userProfile");
+  }
+  next();
+};
 module.exports = {
   isLoggedIn,
   isLoggedOut,
+  redirectToProfile,
 };
