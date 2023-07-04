@@ -50,6 +50,7 @@ router.post("/shop/:productId/submit", isLoggedOut, (req, res, next) => {
       .then((cart) => {
         console.log("Updated User:", cart);
       })
+      .then(() => res.redirect(`/shop/${productId}/`))
       .catch((error) => console.log(error));
   });
 });
@@ -59,8 +60,16 @@ router.post("/shop/:productId/submit", isLoggedOut, (req, res, next) => {
 router.get("/shoppingcart", isLoggedOut, (req, res, next) => {
   const { _id } = req.session.currentUser;
   // User.find(_id).then((user) => console.log("this is the active user", user));
-
-  res.render("shop/shopping-cart", {});
+  // User.findById(_id).then((user) => {
+  //   console.log("the user: ", user);
+  //   res.render("shop/shopping-cart", user);
+  // });
+  User.findById(_id)
+    .populate("shoppingCart")
+    .then((user) => {
+      console.log("the user: ", user);
+      res.render("shop/shopping-cart", user);
+    });
 });
 
 // export

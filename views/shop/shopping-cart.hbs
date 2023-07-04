@@ -1,5 +1,5 @@
 <div class="wrapper shoppingcart">
-  <h1>Your cart</h1>
+  <h1>Your cart {{this.username}}</h1>
   <ul>
     <li>
       <div class="shoppingCartProduct">
@@ -13,6 +13,21 @@
         <span class="closeulb">×</span>
       </div>
     </li>
+    {{#each this.shoppingCart}}
+
+      <li>
+        <div class="shoppingCartProduct">
+          <div class="leftElements">
+            <img src={{this.imgUrl}} alt="" />
+            <div class="shoppingCartProductTextContainer">
+              <h2>{{this.name}}</h2>
+              <span>{{this.price}}$</span>
+            </div>
+          </div>
+          <span class="closeulb">×</span>
+        </div>
+      </li>
+    {{/each}}
   </ul>
   <div class="bottomCheckout">
     <h2 class="totalAmount">Total: 6000$</h2>
