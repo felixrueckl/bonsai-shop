@@ -72,5 +72,20 @@ router.get("/shoppingcart", isLoggedOut, (req, res, next) => {
     });
 });
 
+router.post("/shoppingcart/submit", (req, res, next) => {
+  Product.findById().then(() => {
+    const { _id } = req.session.currentUser;
+
+    User.findByIdAndUpdate(_id, {
+      $pull: { shoppingCart: shoppingCart },
+    })
+      .then((cart) => {
+        console.log("Updated User:", cart);
+      })
+      .then(() => res.redirect("shop/shopping-cart"))
+      .catch((error) => console.log(error));
+  });
+});
+
 // export
 module.exports = router;

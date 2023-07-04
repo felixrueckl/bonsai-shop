@@ -1,30 +1,22 @@
 <div class="wrapper shoppingcart">
   <h1>Your cart {{this.username}}</h1>
   <ul>
-    <li>
-      <div class="shoppingCartProduct">
-        <div class="leftElements">
-          <img src="/images/bonsai/chinese-elm-1.png" alt="" />
-          <div class="shoppingCartProductTextContainer">
-            <h2>Chinese Elm</h2>
-            <span>2000$</span>
-          </div>
-        </div>
-        <span class="closeulb">×</span>
-      </div>
-    </li>
     {{#each this.shoppingCart}}
-
       <li>
         <div class="shoppingCartProduct">
           <div class="leftElements">
             <img src={{this.imgUrl}} alt="" />
             <div class="shoppingCartProductTextContainer">
               <h2>{{this.name}}</h2>
-              <span>{{this.price}}$</span>
+              <span>{{this.price}}€</span>
+              <span>{{this._id}}</span>
             </div>
           </div>
-          <span class="closeulb">×</span>
+          <form method="POST" action="/shoppingcart/submit">
+            <button class="closeulb, button" type="submit">
+              ×</button>
+          </form>
+          <span></span>
         </div>
       </li>
     {{/each}}
