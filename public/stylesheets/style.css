@@ -57,10 +57,18 @@ label {
   background-color: var(--green);
   border: none;
   border-radius: var(--sm-border-radius);
-  padding: 10px;
+  padding: 20px 40px;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+}
+.button img {
+  margin-right: 10px;
+  width: 15px !important;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .wrapper {
@@ -170,6 +178,8 @@ nav .navContent a:hover {
 .singleProducContainer .singleProductTextContainer .priceAndButtonContainer {
   display: flex;
   gap: 30px;
+  justify-content: space-between;
+  align-items: center;
 }
 .singleProducContainer .singleProductTextContainer .priceAndButtonContainer .button {
   width: 100%;
@@ -279,4 +289,33 @@ nav .navContent a:hover {
 }
 .form button {
   width: 100%;
+}
+
+.userPage h1 {
+  margin: 75px 0 50px 0;
+  text-align: center;
+}
+.userPage .userAccount {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 400px;
+  margin: 0 auto;
+}
+.userPage .userAccount button img {
+  width: 15px;
+  margin-right: 5px;
+  fill: white;
+}
+.userPage .userAccount a {
+  text-decoration: none;
+  color: white;
+}
+.userPage .userAccount .logoutButton {
+  background-color: var(--red);
+}
+.userPage p {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
