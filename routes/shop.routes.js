@@ -54,9 +54,13 @@ router.post("/shop/:productId/submit", isLoggedOut, (req, res, next) => {
   });
 });
 
+//  res.render("shop/shop-overview", { products: allProducts });
 /* GET shoppingcart page */
 router.get("/shoppingcart", isLoggedOut, (req, res, next) => {
-  res.render("shop/shopping-cart");
+  const { _id } = req.session.currentUser;
+  // User.find(_id).then((user) => console.log("this is the active user", user));
+
+  res.render("shop/shopping-cart", {});
 });
 
 // export
