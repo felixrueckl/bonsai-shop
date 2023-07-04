@@ -37,9 +37,6 @@ app.use("/", authRouter); // <== has to be added
 const shopRouter = require("./routes/shop.routes");
 app.use("/", shopRouter);
 
-const shoppingcartRouter = require("./routes/shoppingcart.routes");
-app.use("/", shoppingcartRouter);
-
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

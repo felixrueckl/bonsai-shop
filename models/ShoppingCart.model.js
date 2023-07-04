@@ -8,14 +8,6 @@ const shoppingCartSchema = new Schema(
         ref: "Product",
       },
     ],
-    quantity: {
-      type: Number,
-      min: 0,
-    },
-    price: {
-      type: Number,
-      min: 0,
-    },
   },
   {
     timestamps: true,
