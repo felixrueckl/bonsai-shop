@@ -1,20 +1,40 @@
-<div class="wrapper">
+{{! <div class="wrapper">
     <h2>Edit User Info</h2>
 <form action="/editUser" method="POST" class="form">
     <div class="inputContainer">
   <label>Change Username:
     <input type="text" name="username" placeholder="Username" />
   </label>
-
-<div class="inputContainer">
-  <label>
-    Change Email Address:
-    <input type="text" name="email" placeholder="Email" />
-  </label>
-</div>
+  <div class="inputContainer">
+    <label>
+      Change Email Address:
+      <input type="text" name="email" placeholder="Email" />
+    </label>
+  </div>
   <button class="button">Save Changes</button>
   </form>
   <form method="POST" action="/deleteUser">
   <button class="button">Delete User</button>
   </form>
+</div> }}
+
+<div class="wrapper">
+  <div class="inputContainer">
+    <form action="/editUser" method="POST" class="form">
+      <h1>Edit User Info</h1>
+      <label>Change Username:
+        <input type="text" name="username" placeholder="Username" />
+      </label>
+      <label>
+        Change Email Address:
+        <input type="text" name="email" placeholder="Email" />
+      </label>
+
+      <button class="button">Save Changes</button>
+      <form method="POST" action="/deleteUser">
+        <button class="button delButton">Delete User</button>
+      </form>
+    </form>
+
+  </div>
 </div>
