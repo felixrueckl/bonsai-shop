@@ -38,6 +38,10 @@ h1 {
   font-size: 44px;
 }
 
+.centerHeading {
+  text-align: center;
+}
+
 h2 {
   font-size: 24px;
 }
@@ -79,6 +83,7 @@ label {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 30px;
+  margin-bottom: 50px;
 }
 
 nav {
@@ -125,7 +130,7 @@ nav .navContent a:hover {
 
 .homePage {
   position: relative;
-  margin-top: 75px;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 100px;
@@ -388,6 +393,13 @@ nav .navContent a:hover {
 }
 .userPage p {
   text-align: center;
+}
+
+.teamSection {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  padding: 75px 0;
 }
 
 #map {
