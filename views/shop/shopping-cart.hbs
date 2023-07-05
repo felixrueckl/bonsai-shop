@@ -24,7 +24,10 @@
               <span>{{this.price}}$</span>
             </div>
           </div>
-          <span class="closeulb">×</span>
+          <form method="POST" action="/shop/{{this._id}}/remove">
+            <button class="button closeulb" type="delete">
+              x</button>
+          </form>
         </div>
       </li>
     {{/each}}

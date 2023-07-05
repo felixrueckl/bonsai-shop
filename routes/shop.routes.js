@@ -72,5 +72,23 @@ router.get("/shoppingcart", isLoggedOut, (req, res, next) => {
     });
 });
 
+//REMOVE ITEM FROM SHOPPING CART
+router.post("/shop/:productId/remove", isLoggedOut, (req, res, next) => {
+  const { productId } = req.params;
+  console.log("productId", req.params);
+  console.log(req.session.currentUser);
+  const { _id } = req.session.currentUser;
+  User.findByIdAndUpdate(
+    _id,
+    { $pull: { shoppingCart: productId } },
+    { new: true }
+  )
+    .populate("shoppingCart")
+    .then((cart) => {
+      console.log("Updated User:", cart);
+      res.render("shop/shopping-cart", cart);
+    })
+    .catch((error) => console.log(error));
+});
 // export
 module.exports = router;
