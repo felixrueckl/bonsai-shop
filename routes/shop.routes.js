@@ -86,12 +86,18 @@ router.post("/shop/:productId/remove", isLoggedOut, (req, res, next) => {
   //console.log("productId", req.params);
   //console.log(req.session.currentUser);
   const { _id } = req.session.currentUser;
-  User.findByIdAndUpdate(
-    _id,
-    { $pull: { shoppingCart: productId } },
-    { new: true }
-  )
+
+  User.findById(_id)
     .populate("shoppingCart")
+    .then((user) => {
+      const index = user.shoppingCart.findIndex(
+        (product) => product._id.toString() === productId
+      );
+      if (index !== -1) {
+        user.shoppingCart.splice(index, 1);
+      }
+      return user.save();
+    })
     .then((user) => {
       const totalAmount = user.shoppingCart.reduce((sum, product) => {
         return sum + product.price;
