@@ -53,7 +53,7 @@ h2 {
 p {
   font-size: 16px;
   color: var(--medium-grey);
-  line-height: 150%;
+  line-height: 160%;
 }
 
 label {
@@ -138,6 +138,51 @@ nav {
 }
 
 // Home page styling
+.homePage {
+  position: relative;
+  margin-top: 75px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 100px;
+
+  h1 {
+    position: absolute;
+    // top: 10px;
+    font-size: 85px;
+    padding-left: 20px;
+  }
+  .heroSectionTextContainer {
+    margin-top: 150px;
+
+    p {
+      margin-bottom: 50px;
+    }
+    .button {
+      background-color: var(--black);
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+
+  .heroImageContaier {
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    border-radius: var(--std-border-radius);
+  }
+
+  .treeDes {
+    position: absolute;
+    right: -100px;
+    // left: 0;
+    // top: 100px;
+    bottom: 100px;
+    transform: rotate(90deg);
+    color: var(--medium-grey);
+  }
+}
 
 // Shop Styling
 .shop {
@@ -268,6 +313,9 @@ nav {
       font-size: 60px;
       position: relative;
       bottom: 10px;
+      border: none;
+      background: none;
+      color: var(--medium-grey);
     }
 
     .closeulb:hover {
