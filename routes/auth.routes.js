@@ -127,6 +127,18 @@ router.post("/editUser", isLoggedOut, (req, res, next) => {
     .catch((error) => next(error));
 });
 
+router.post("/deleteUser", isLoggedOut, (req, res, next) => {
+  const { _id } = req.session.currentUser;
+  console.log("Hello");
+  User.findByIdAndDelete(_id)
+    .then(() => {
+      console.log("User deleted");
+      req.session.destroy();
+    })
+    .then(() => res.redirect("/"))
+    .catch((error) => next(error));
+});
+
 router.post("/logout", (req, res, next) => {
   req.session.destroy((err) => {
     if (err) next(err);
