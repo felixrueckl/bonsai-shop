@@ -1,7 +1,7 @@
 <div class="wrapper shoppingcart">
-  <h1>Your cart {{this.username}}</h1>
+  <h1>Your cart {{user.username}}</h1>
   <ul>
-    {{#each this.shoppingCart}}
+    {{#each user.shoppingCart}}
       <li>
         <div class="shoppingCartProduct">
           <div class="leftElements">
@@ -20,7 +20,7 @@
     {{/each}}
   </ul>
   <div class="bottomCheckout">
-    <h2 class="totalAmount">Total: 6000$</h2>
+    <h2 class="totalAmount">Total: {{totalAmount}}$</h2>
     <button class="button">Checkout</button>
   </div>
 </div>
