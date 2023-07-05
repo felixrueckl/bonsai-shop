@@ -112,10 +112,26 @@ router.get("/userProfile", isLoggedOut, (req, res) => {
   res.render("users/user-profile", { userInSession: req.session.currentUser });
 });
 
+router.get("/editUser", (req, res, next) => {
+  res.render("users/edit-user", { userInSession: req.session.currentUser });
+});
+
+router.post("/editUser", isLoggedOut, (req, res, next) => {
+  const { _id } = req.session.currentUser;
+  const { username, email } = req.body;
+  User.findByIdAndUpdate(_id, { username, email }, { new: true })
+    .then((updatedUser) => {
+      console.log("User updated: ", updatedUser);
+      res.redirect("/userProfile");
+    })
+    .catch((error) => next(error));
+});
+
 router.post("/logout", (req, res, next) => {
   req.session.destroy((err) => {
     if (err) next(err);
-    res.redirect("/");
+    res.redirect("/login");
   });
 });
+
 module.exports = router;
