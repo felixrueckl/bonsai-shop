@@ -137,6 +137,8 @@ nav {
   }
 }
 
+// Home page styling
+
 // Shop Styling
 .shop {
   h1 {
@@ -351,6 +353,10 @@ nav {
     margin: 0 auto;
 
     button {
+      a {
+        color: white;
+        text-decoration: none;
+      }
       img {
         width: 15px;
         margin-right: 5px;
@@ -358,9 +364,16 @@ nav {
       }
     }
 
-    a {
+    .changeBtn {
       text-decoration: none;
-      color: white;
+      color: var(--medium-grey);
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .changeBtn:hover {
+      cursor: pointer;
+      color: var(--green);
     }
     .logoutButton {
       background-color: var(--red);

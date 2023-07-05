@@ -304,14 +304,24 @@ nav .navContent a:hover {
   width: 400px;
   margin: 0 auto;
 }
+.userPage .userAccount button a {
+  color: white;
+  text-decoration: none;
+}
 .userPage .userAccount button img {
   width: 15px;
   margin-right: 5px;
   fill: white;
 }
-.userPage .userAccount a {
+.userPage .userAccount .changeBtn {
   text-decoration: none;
-  color: white;
+  color: var(--medium-grey);
+  text-decoration: none;
+  text-align: center;
+}
+.userPage .userAccount .changeBtn:hover {
+  cursor: pointer;
+  color: var(--green);
 }
 .userPage .userAccount .logoutButton {
   background-color: var(--red);
