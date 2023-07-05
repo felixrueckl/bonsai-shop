@@ -1,11 +1,18 @@
 {{#if userInSession}}
-  <h2>Welcome, {{userInSession.username}}!</h2>
-  <p>This is your profile page my friend!</p>
-  <button>
-    <a href="/userProfile">Reload the page</a>
-  </button>
+  <div class="wrapper userPage">
+    <h1>Welcome, {{userInSession.username}}!</h1>
+    <div class="userAccount">
+      <p>This is your profile page my friend!</p>
+      <button class="button">
+        <img src="/images/cart-white.svg" alt="" />
+        <a href="/userProfile">View cart</a>
+      </button>
+      <button class="button logoutButton">
+        <a href="/userProfile">Log out</a>
+      </button>
+      <a class="changeBtn" href="#">Change Settings</a>
+    </div>
+  </div>
 {{else}}
-
   <br /><p>Still no logged in user, sorry!</p>
-
 {{/if}}
