@@ -3,13 +3,16 @@
     <h1>Welcome, {{userInSession.username}}!</h1>
     <div class="userAccount">
       <p>This is your profile page my friend!</p>
-      <button class="button">
-        <img src="/images/cart-white.svg" alt="" />
-        <a href="/shoppingcart">View cart</a>
-      </button>
-      <button class="button logoutButton">
-        <a href="/userProfile">Log out</a>
-      </button>
+
+      <form method="GET" action="/shoppingcart">
+        <button class="button" type="submit">
+          <img src="/images/cart-white.svg" alt="" />View cart</button>
+      </form>
+
+      <form method="POST" action="/logout">
+        <button class="button logoutButton" type="submit">Log out</button>
+      </form>
+
       <a class="changeBtn" href="/editUser">Change Settings</a>
     </div>
   </div>

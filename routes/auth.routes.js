@@ -142,6 +142,7 @@ router.post("/deleteUser", isLoggedOut, (req, res, next) => {
 router.post("/logout", (req, res, next) => {
   req.session.destroy((err) => {
     if (err) next(err);
+    res.clearCookie("connect.sid");
     res.redirect("/login");
   });
 });
