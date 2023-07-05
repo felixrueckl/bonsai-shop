@@ -80,6 +80,10 @@ label {
   cursor: pointer;
 }
 
+.delButton {
+  background-color: var(--red);
+}
+
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
@@ -397,6 +401,13 @@ nav {
   }
 }
 
+// .formFlex {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+//   width: 600px;
+// }
+
 // Userpage Styling
 .userPage {
   h1 {
@@ -413,6 +424,7 @@ nav {
     margin: 0 auto;
 
     button {
+      width: 100%;
       a {
         color: white;
         text-decoration: none;

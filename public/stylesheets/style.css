@@ -71,6 +71,10 @@ label {
   cursor: pointer;
 }
 
+.delButton {
+  background-color: var(--red);
+}
+
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
@@ -357,6 +361,9 @@ nav .navContent a:hover {
   width: 400px;
   margin: 0 auto;
 }
+.userPage .userAccount button {
+  width: 100%;
+}
 .userPage .userAccount button a {
   color: white;
   text-decoration: none;
@@ -381,4 +388,9 @@ nav .navContent a:hover {
 }
 .userPage p {
   text-align: center;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
