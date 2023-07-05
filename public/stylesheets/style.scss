@@ -213,15 +213,27 @@ nav {
 }
 
 // Single Product styling
+.producPageContentWrapper {
+  margin-top: 75px;
+}
+
+.backButton {
+  color: var(--medium-grey);
+  text-decoration: none;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
 .singleProducContainer {
   display: flex;
   gap: 100px;
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 20px;
 
   img {
     width: 40%;
+    align-self: center;
     border-radius: var(--std-border-radius);
   }
   .singleProductTextContainer {
