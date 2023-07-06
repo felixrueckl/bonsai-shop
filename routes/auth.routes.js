@@ -119,8 +119,25 @@ router.get("/editUser", (req, res, next) => {
 router.post("/editUser", isLoggedOut, (req, res, next) => {
   const { _id } = req.session.currentUser;
   const { username, email } = req.body;
-  User.findByIdAndUpdate(_id, { username, email }, { new: true })
+
+  let assert = () => {
+    console.log("these are username and email:", username, email);
+    if (email && username) {
+      return { email, username };
+    } else if (email && !username) {
+      return { email };
+    } else if (!email && username) {
+      return { username };
+    } else {
+      return {};
+    }
+  };
+  result = assert();
+  console.log(result);
+
+  User.findByIdAndUpdate(_id, result, { new: true })
     .then((updatedUser) => {
+      req.session.currentUser = updatedUser;
       console.log("User updated: ", updatedUser);
       res.redirect("/userProfile");
     })
