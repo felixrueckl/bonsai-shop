@@ -106,9 +106,9 @@ nav .navContent .logo {
   color: var(--black);
   bottom: 5px;
   position: relative;
-  /*  img {
-    height: 35px;
-  } */
+}
+nav .navContent .logo img {
+  width: 37px;
 }
 nav .navContent ul {
   display: flex;
@@ -122,7 +122,7 @@ nav .navContent a {
   color: var(--medium-grey);
 }
 nav .navContent a img {
-  width: 25px;
+  width: 22px;
 }
 nav .navContent a:hover {
   color: #6cad3f;
@@ -206,6 +206,10 @@ nav .navContent a:hover {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 20px;
+}
+.singleProducContainer iframe {
+  border: var(--std-border) !important;
+  border-radius: var(--std-border-radius);
 }
 .singleProducContainer img {
   width: 40%;

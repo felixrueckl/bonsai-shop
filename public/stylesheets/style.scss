@@ -116,10 +116,9 @@ nav {
       color: var(--black);
       bottom: 5px;
       position: relative;
-
-      /*  img {
-        height: 35px;
-      } */
+      img {
+        width: 37px;
+      }
     }
 
     ul {
@@ -136,7 +135,7 @@ nav {
       color: var(--medium-grey);
 
       img {
-        width: 25px;
+        width: 22px;
       }
     }
 
@@ -239,6 +238,11 @@ nav {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 20px;
+
+  iframe {
+    border: var(--std-border) !important;
+    border-radius: var(--std-border-radius);
+  }
 
   img {
     width: 40%;
