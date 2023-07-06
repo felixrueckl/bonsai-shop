@@ -101,5 +101,12 @@ router.post("/shop/:productId/remove", isLoggedOut, (req, res, next) => {
     })
     .catch((error) => console.log(error));
 });
+
+const { validate } = require("../middleware/validator");
+const paymentController = require("../controllers/payment.controller");
+
+router.get("/checkout", paymentController.index);
+router.post("/payment", validate("payment"), paymentController.payment);
+
 // export
 module.exports = router;
