@@ -20,15 +20,13 @@ module.exports = (app) => {
   app.use(
     session({
       secret: process.env.SESS_SECRET,
-      resave: false,
-      saveUninitialized: true,
-      proxy: true,
-      name: "BonsaiWebAppCookieName",
+      resave: true,
+      saveUninitialized: false,
       cookie: {
         sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
         secure: process.env.NODE_ENV === "production",
         httpOnly: true,
-        maxAge: 172800000, // 60 * 1000 ms === 1 min
+        maxAge: 60000, // 60 * 1000 ms === 1 min
       },
     })
   );
