@@ -17,10 +17,11 @@
           <div class="priceAndButtonContainer">
             <span class="priceValue">{{this.price}}$</span>
             <form method="POST" action="/shop/{{this._id}}/submit">
-              <button class="button" type="submit">
+              <button class="button" type="submit" onclick="showNotification()">
                 <img src="/images/cart-white.svg" alt="" />Add to cart</button>
             </form>
           </div>
+          <div id="notification"></div>
         </div>
       </div>
     </div>
