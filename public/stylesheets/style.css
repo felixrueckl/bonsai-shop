@@ -106,9 +106,9 @@ nav .navContent .logo {
   color: var(--black);
   bottom: 5px;
   position: relative;
-}
-nav .navContent .logo img {
-  height: 35px;
+  /*  img {
+    height: 35px;
+  } */
 }
 nav .navContent ul {
   display: flex;
@@ -122,7 +122,7 @@ nav .navContent a {
   color: var(--medium-grey);
 }
 nav .navContent a img {
-  width: 18px;
+  width: 25px;
 }
 nav .navContent a:hover {
   color: #6cad3f;
