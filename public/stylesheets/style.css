@@ -38,6 +38,10 @@ h1 {
   font-size: 44px;
 }
 
+.centerHeading {
+  text-align: center;
+}
+
 h2 {
   font-size: 24px;
 }
@@ -45,7 +49,7 @@ h2 {
 p {
   font-size: 16px;
   color: var(--medium-grey);
-  line-height: 150%;
+  line-height: 160%;
 }
 
 label {
@@ -71,10 +75,15 @@ label {
   cursor: pointer;
 }
 
+.delButton {
+  background-color: var(--red);
+}
+
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 30px;
+  margin-bottom: 50px;
 }
 
 nav {
@@ -99,7 +108,7 @@ nav .navContent .logo {
   position: relative;
 }
 nav .navContent .logo img {
-  height: 35px;
+  width: 37px;
 }
 nav .navContent ul {
   display: flex;
@@ -113,10 +122,48 @@ nav .navContent a {
   color: var(--medium-grey);
 }
 nav .navContent a img {
-  width: 18px;
+  width: 22px;
 }
 nav .navContent a:hover {
   color: #6cad3f;
+}
+
+.homePage {
+  position: relative;
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 100px;
+}
+.homePage h1 {
+  position: absolute;
+  font-size: 85px;
+  padding-left: 20px;
+}
+.homePage .heroSectionTextContainer {
+  margin-top: 150px;
+}
+.homePage .heroSectionTextContainer p {
+  margin-bottom: 50px;
+}
+.homePage .heroSectionTextContainer .button {
+  background-color: var(--black);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.homePage .heroImageContaier {
+  position: relative;
+}
+.homePage img {
+  width: 100%;
+  border-radius: var(--std-border-radius);
+}
+.homePage .treeDes {
+  position: absolute;
+  right: -100px;
+  bottom: 100px;
+  transform: rotate(90deg);
+  color: var(--medium-grey);
 }
 
 .shop h1 {
@@ -142,15 +189,31 @@ nav .navContent a:hover {
   border-radius: 10px;
 }
 
+.producPageContentWrapper {
+  margin-top: 75px;
+}
+
+.backButton {
+  color: var(--medium-grey);
+  text-decoration: none;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
 .singleProducContainer {
   display: flex;
   gap: 100px;
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 20px;
+}
+.singleProducContainer iframe {
+  border: var(--std-border) !important;
+  border-radius: var(--std-border-radius);
 }
 .singleProducContainer img {
   width: 40%;
+  align-self: center;
   border-radius: var(--std-border-radius);
 }
 .singleProducContainer .singleProductTextContainer {
@@ -230,6 +293,9 @@ nav .navContent a:hover {
   font-size: 60px;
   position: relative;
   bottom: 10px;
+  border: none;
+  background: none;
+  color: var(--medium-grey);
 }
 .shoppingcart .shoppingCartProduct .closeulb:hover {
   cursor: pointer;
@@ -304,6 +370,9 @@ nav .navContent a:hover {
   width: 400px;
   margin: 0 auto;
 }
+.userPage .userAccount button {
+  width: 100%;
+}
 .userPage .userAccount button a {
   color: white;
   text-decoration: none;
@@ -328,4 +397,16 @@ nav .navContent a:hover {
 }
 .userPage p {
   text-align: center;
+}
+
+.teamSection {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  padding: 75px 0;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
