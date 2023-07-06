@@ -23,12 +23,12 @@ module.exports = (app) => {
       resave: false,
       saveUninitialized: true,
       proxy: true,
-      name: "MyCoolWebAppCookieName",
+      name: "BonsaiWebAppCookieName",
       cookie: {
         sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
         secure: process.env.NODE_ENV === "production",
         httpOnly: true,
-        maxAge: 60000, // 60 * 1000 ms === 1 min
+        maxAge: 172800000, // 60 * 1000 ms === 1 min
       },
     })
   );
