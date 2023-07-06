@@ -105,6 +105,7 @@ router.post("/shop/:productId/remove", isLoggedOut, (req, res, next) => {
 
       res.render("shop/shopping-cart", { user, totalAmount });
     })
+    .then(() => res.redirect("/shoppingcart"))
     .catch((error) => console.log(error));
 });
 // export
