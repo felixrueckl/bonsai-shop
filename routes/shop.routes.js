@@ -48,7 +48,7 @@ router.post("/shop/:productId/submit", isLoggedOut, (req, res, next) => {
 
     User.findByIdAndUpdate(_id, { $push: { shoppingCart: productId } })
       .then((cart) => {
-        console.log("Updated User:", cart);
+        //console.log("Updated User:", cart);
       })
       .then(() => res.redirect(`/shop/${productId}/`))
       .catch((error) => console.log(error));
@@ -67,27 +67,45 @@ router.get("/shoppingcart", isLoggedOut, (req, res, next) => {
   User.findById(_id)
     .populate("shoppingCart")
     .then((user) => {
-      console.log("the user: ", user);
-      res.render("shop/shopping-cart", user);
+      // console.log("the user: ", user);
+      const totalAmount = user.shoppingCart.reduce((sum, product) => {
+        return sum + product.price;
+      }, 0);
+
+      res.render("shop/shopping-cart", { user, totalAmount });
+    })
+    .catch((error) => {
+      console.log(error);
+      next(error);
     });
 });
 
 //REMOVE ITEM FROM SHOPPING CART
 router.post("/shop/:productId/remove", isLoggedOut, (req, res, next) => {
   const { productId } = req.params;
-  console.log("productId", req.params);
-  console.log(req.session.currentUser);
+  //console.log("productId", req.params);
+  //console.log(req.session.currentUser);
   const { _id } = req.session.currentUser;
-  User.findByIdAndUpdate(
-    _id,
-    { $pull: { shoppingCart: productId } },
-    { new: true }
-  )
+
+  User.findById(_id)
     .populate("shoppingCart")
-    .then((cart) => {
-      console.log("Updated User:", cart);
-      res.render("shop/shopping-cart", cart);
+    .then((user) => {
+      const index = user.shoppingCart.findIndex(
+        (product) => product._id.toString() === productId
+      );
+      if (index !== -1) {
+        user.shoppingCart.splice(index, 1);
+      }
+      return user.save();
     })
+    .then((user) => {
+      const totalAmount = user.shoppingCart.reduce((sum, product) => {
+        return sum + product.price;
+      }, 0);
+
+      res.render("shop/shopping-cart", { user, totalAmount });
+    })
+    .then(() => res.redirect("/shoppingcart"))
     .catch((error) => console.log(error));
 });
 // export

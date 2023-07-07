@@ -13,19 +13,28 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
+// Needed for the Google Maps API
+// https://www.npmjs.com/package/body-parser
+//const bodyParser = require("body-parser");
+
 const app = express();
 require("./config/session.config")(app);
 
 // Serve the "images" folder inside "public"
 app.use(express.static(__dirname + "/public/images/"));
 
+//app.use(bodyParser.urlencoded({ extended: true }));
+//app.set("view engine", "ejs");
+
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
 const capitalize = require("./utils/capitalize");
-const projectName = "basic-auth";
+const projectName = "BonsaiBranch";
 
-app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
+app.locals.appTitle = `${capitalize(
+  projectName
+)} created by Andy, Alex and Felix`;
 
 // 👇 Start handling routes here
 const index = require("./routes/index.routes"); // <== already included

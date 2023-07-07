@@ -1,24 +1,27 @@
 <div class="wrapper">
-  <div class="singleProducContainer">
-    <img src="{{this.imgUrl}}" alt="" />
-
-    <div class="singleProductTextContainer">
-      <div class="topSection">
-        <div class="singleProductHeaderContainer">
-          <span class="storeIcon">Bonsai Store</span>
-          <h1>{{this.name}}</h1>
+  <div class="producPageContentWrapper">
+    <a class="backButton" href="/shop">🠐 Back to shop</a>
+    <div class="singleProducContainer">
+      <img src="{{this.imgUrl}}" alt="" />
+      <div class="singleProductTextContainer">
+        <div class="topSection">
+          <div class="singleProductHeaderContainer">
+            <span class="storeIcon">Bonsai Store</span>
+            <h1>{{this.name}}</h1>
+          </div>
+          <p>
+            {{this.description}}
+          </p>
         </div>
-        <p>
-          {{this.description}}
-        </p>
-      </div>
-      <div class="bottomSection">
-        <div class="priceAndButtonContainer">
-          <span class="priceValue">{{this.price}}$</span>
-          <form method="POST" action="/shop/{{this._id}}/submit">
-            <button class="button" type="submit">
-              <img src="/images/cart-white.svg" alt="" />Add to cart</button>
-          </form>
+        <div class="bottomSection">
+          <div class="priceAndButtonContainer">
+            <span class="priceValue">{{this.price}}$</span>
+            <form method="POST" action="/shop/{{this._id}}/submit">
+              <button class="button" type="submit" onclick="showNotification()">
+                <img src="/images/cart-white.svg" alt="" />Add to cart</button>
+            </form>
+          </div>
+          <div id="notification"></div>
         </div>
       </div>
     </div>
